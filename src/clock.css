@@ -15,8 +15,15 @@ html, body, #root {
   display: flex;
   align-items: center;
   justify-content: center;
-  font: 600 10vw/1 "ESBuild", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  font: 600 100px/1 "ESBuild", -apple-system, "Helvetica Neue", Arial, sans-serif;
   /* Fixed-width digits so the clock doesn't jitter as seconds change. */
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Off-screen copy of the widest time at 100px, used to compute the fitted font size. */
+.clock-measure {
+  position: absolute;
+  visibility: hidden;
 }
