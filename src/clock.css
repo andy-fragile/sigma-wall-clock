@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "ESBuild";
+  src: url("./fonts/ESBuild.woff2") format("woff2");
+  font-display: block;
+}
+
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  background: transparent;
+}
+
+.clock {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 600 10vw/1 "ESBuild", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  /* Fixed-width digits so the clock doesn't jitter as seconds change. */
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
