@@ -15,7 +15,12 @@ html, body, #root {
   display: flex;
   align-items: center;
   justify-content: center;
-  font: 600 100px/1 "ESBuild", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  /* Longhands, not the `font` shorthand: the minifier moves the shorthand after
+     font-variant-numeric, and the shorthand resets it to proportional digits. */
+  font-family: "ESBuild", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 100px;
+  line-height: 1;
   /* Fixed-width digits so the clock doesn't jitter as seconds change. */
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
